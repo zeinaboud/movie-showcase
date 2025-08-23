@@ -1,5 +1,5 @@
 import { useState,useEffect } from 'react'
-import Search from './components/search'
+import Search from './components/Search.jsx'
 import Spinner from './components/Spinner';
 import MovieCard from './components/MovieCard';
 import { useDebounce } from 'react-use';
@@ -86,7 +86,6 @@ const App = () => {
       <div className='wrapper'>
         <Header/>
         <Search searchTearm={searchTearm} setSearchTerm={setSearchTerm}/>
-        
           <section id='trending' className='trending '>
             <h2 className='py-3'>Trnding Movies</h2>
             {istrending.length === 0 ? (
