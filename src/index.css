@@ -1,0 +1,69 @@
+@import "tailwindcss";
+@theme {
+  --color-primary: #030014;
+  --color-light-100: #cecefb;
+  --color-light-200: #a8b5db;
+
+  --color-gray-100: #9ca4ab;
+  --color-dark-100: #0f0d23;
+
+  --font-dm-sans: DM Sans, sans-serif;
+
+  --breakpoint-xs: 480px;
+  --background-image-hero-patern: url("/BG.png");
+}
+
+@layer base {
+  body {
+    font-family: "DM Sans ", serif;
+    font-optical-sizing: auto;
+    background: #030014;
+  }
+  html {
+  scroll-behavior: smooth;
+  }
+  h1 {
+    @apply mx-auto max-w-4xl text-center text-5xl font-bold leading-tight tracking-[-1%] text-white sm:text-[64px] sm:leading-[76px] z-10;
+  }
+
+  h2 {
+    @apply text-2xl font-bold text-white sm:text-3xl;
+  }
+  main {
+    @apply min-h-screen relative bg-primary;
+  }
+  header {
+    @apply mt-5 sm:mt-10;
+  }
+  header img {
+    @apply w-full max-w-lg h-auto object-contain mx-auto drop-shadow-md;
+  }
+}
+
+@layer components {
+  .patern {
+    @apply bg-hero-patern w-full h-full bg-center bg-cover absolute z-0;
+  }
+  .wrapper {
+    @apply px-5 py-12 max-w-7xl mx-auto flex flex-col relative z-10;
+  }
+
+  .search {
+    @apply max-w-3xl rounded-lg px-5;
+  }
+  .trending {
+    @apply mt-20;
+
+    & ul li {
+      @apply min-w-[230px] flex flex-row items-center;
+    }
+
+    & ul li p {
+      @apply  mt-[22px] text-nowrap;
+    }
+
+    & ul li img {
+      @apply w-[127px] h-[163px] rounded-lg object-cover -ml-3.5;
+    }
+  }
+}
