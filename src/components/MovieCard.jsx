@@ -44,7 +44,7 @@ const MovieCard = ({ movie: { title, poster_path, vote_average, original_languag
         <>
             <div id="image-grid">
                 <img
-                    className='img-grid w-full h-[100] rounded'
+                    className='img-grid w-full h-auto rounded'
                     src={poster_path ? `https://image.tmdb.org/t/p/w500/${poster_path}` :
                         '/no-movie.png'}
                     alt={title}
