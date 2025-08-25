@@ -41,7 +41,7 @@ return (
                 {/*logo section */}
                 <div className={'flex items-center gap-2 px-6 pr-0 md:pr-16'}>
                     <a to="/" className='' >
-                        <img className='w-16' src="/src/assets/img/logo.png" alt="" />
+                        <img className='w-16' src="/public/logo.png" alt="" />
                     </a>
                 </div>
 
